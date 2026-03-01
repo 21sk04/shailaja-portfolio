@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smooth Scroll</title>
+
+<style>
+html{
+  scroll-behavior:smooth;
+}
+body{
+  margin:0;
+  background:black; 
+}
+.navbar{
+  position:sticky;
+  top: 0px;
+  background:#111;
+  padding:15px;
+  display:flex;
+  justify-content:flex-end;
+  gap:30px;
+  flex-wrap: wrap;
+  
+}
+a{
+  color:bisque;
+  text-decoration:none;
+  font-size:18px;
+}
+section{
+  min-height: 90vh;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+}
+#home{
+    justify-content: center;
+    padding: 90px;
+    background:rgb(10, 1, 58);
+    color: white;
+}
+#about{
+    padding: 90px;
+    background:rgb(10, 1, 58);
+    color: black;
+}
+#skills{
+    padding: 90px;
+    background:rgb(10, 1, 58);
+    color: white;
+}
+#projects{
+    padding: 90px;
+    background:rgb(10, 1, 58);
+    color: white;
+}
+#contact{
+    padding: 90px;
+    background:rgb(10, 1, 58);
+    color: white;
+}
+img{
+   
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    object-position: top;
+    object-position: 50% 5%;
+    box-shadow: 0px 5px 70px black;
+    max-width:100%;  
+}
+.home-content{
+    background-color:wheat;
+    padding: 10px;
+    box-shadow:0px 5px 30px black;
+    border-radius:10px ;
+    width:50%;
+    color: black;
+}
+.home-container{
+    display: flex;
+    gap: 40px;
+}
+@media (max-width:768px){
+  .home-container{
+    flex-direction: column;
+  }
+}
+footer{
+    position:sticky;
+    background:black;
+    padding:15px;
+    color:bisque;
+    text-align: center;  
+}
+#about p{
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+#about h2{
+    text-align: center;
+    margin-bottom: 25px;
+    color: black;
+}
+#about ul{
+    padding-left: 20px;
+}
+
+#about ul li{
+    margin-bottom: 8px;
+}
+.ab{
+    margin-left: 300px;
+    border-radius: 30px;
+    width: 50%;
+    border: 5px solid black;
+    background-color: wheat;
+    padding: 10px;
+    box-shadow: 0px 5px 60px black;
+}
+.container{
+    align-items: center;
+    height:200px;
+    width:200px;
+    position: relative;
+    margin: 150px auto;
+}
+.box{
+    box-shadow:0px 5px 60px black;
+    height: inherit;
+    width: inherit;
+    border: 1px solid black;
+    position: absolute;
+    color: black;
+    padding: 10px;
+}
+.box:hover{
+    z-index: 3;
+}
+#box1{
+    background-color: wheat;
+    bottom:130px;
+    right:130px;
+}
+#box2{
+    background-color: wheat;
+    bottom:130px;
+    left:130px;
+}
+#box3{
+    background-color: wheat;
+    top:130px;
+    right:130px;
+    
+}
+#box4{
+    background-color:wheat;
+    top:130px;
+    left:130px;
+    z-index: 3;
+
+}
+#box5{
+    background-color:wheat;
+    top:0px;
+    right:0px;
+}
+.proj-container{
+    display: flex;
+    justify-content: space-around;
+    gap:40px ;
+    
+    
+}
+.proj-box{
+    border: 1px solid black;
+    background-color: wheat;
+    color: #111;
+    height: 500px;
+    width: 500px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 60px black;
+    transition: 0.3s ease;
+    padding: 15px;
+}
+.proj-box:hover{
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px rgba(255,255,255,0.7);
+}
+.contact-icons{
+    display: flex;
+    justify-content: center;   
+    align-items: center;      
+    height: 100vh;          
+    gap: 120px;                
+    text-align: center;
+    flex-wrap:wrap;
+  height:auto;
+    
+   
+}
+.contact-icons i{
+    font-size: 60px;
+    margin: 15px;
+    color: white;
+    transition: 0.3s;
+}
+
+.contact-icons i:hover{
+    color: wheat;
+    transform: translateY(-6px);
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<section id="home">
+  <div class="home-container">
+    <div class="home-content">
+      <h1>Shailaja</h1>
+      <h3>CSE Student | Full Stack Java Developer</h3>
+      <p class="tagline">
+        Aspiring Software Developer focused on Full Stack Development and problem solving.
+      </p>
+      <p class="about">
+        I am a Computer Science student currently working as a Full Stack Java Intern at
+        Glowlogics Solutions Pvt. Ltd., Bengaluru, where I am gaining real-time industry
+        experience in building scalable and efficient web applications.
+      </p>
+    </div>
+    <div class="home-img">
+      <img src="Uniform Photo.jpeg" alt="Shailaja">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+    <div class="ab">
+        <h2>About Me</h2>
+        <p>I am a dedicated and self-motivated Computer Science Engineering student with a strong interest in Full Stack Development and Software Engineering.<br><br>Currently, I am undergoing a 4-month internship as a Full Stack Java Developer at Glowlogics Solutions Pvt. Ltd., Bengaluru, where I am gaining real-time experience in building scalable and efficient web applications.<br><br>I am actively improving my skills in Java, Frontend Development, Backend Development, and Database Management.</p>
+        <br>
+        <h3>I am actively learning</h3>
+        <ul>
+            <li>Java Programming</li>
+            <li>Frontend Development</li>
+            <li>Backend Development</li>
+            <li>Database Management (MySQL)</li>
+        </ul>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+    <div class="box" id="box1">
+        <h3>Programming Languages</h3>
+        <ul>
+            <li>Java</li>
+            <li>C</li>
+        </ul>
+    </div>
+
+    <div class="box" id="box2">
+        <h3>Web Development</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+
+    <div class="box" id="box3">
+        <h3>Frameworks</h3>
+        <ul>
+            <li>Flask</li>
+        </ul>
+    </div>
+
+    <div class="box" id="box4">
+        <h3>Database</h3>
+        <ul>
+            <li>MySQL</li>
+        </ul>
+    </div>
+
+    <div class="box" id="box5">
+        <h3>Tool</h3>
+        <ul>
+            <li>Git</li>
+            <li>Github</li>
+            <li>VS Code</li>
+        </ul>
+    </div>
+    </div>
+ 
+</section>
+<section id="projects">
+    <div class="proj-container">
+        <div class="proj-box" id="proj1">
+            <h2>Mental Health Sentimental Analyzer</h2>
+            <p>A responsive web application that spreads mental health awareness and enables users to request professional consultation.</p>
+            <h4>Tools Used :</h4>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+            </ul>
+            <p>Provides a simple and accessible way for users to learn about mental health conditions, understand their symptoms, and request professional consultation without hesitation. It also offers quick access to emergency support, reducing the gap between people and timely mental health assistance.</p>
+        </div>
+        <div class="proj-box" id="proj2">
+             <h2>Heart Attack Risk Prediction Using Retinal Eye Images</h2>
+            <p>An AI-based web application that predicts heart attack risk from retinal images using deep learning.</p>
+            <h4>Tools Used :</h4>
+            <ul>
+                <li>Python</li>
+                <li>TensorFlow/Keras</li>
+                <li>Flask</li>
+                <li>OpenCV</li>
+                <li>NumPy</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>SQLite</li>
+            </ul>
+            <p>Provides a non-invasive, fast, and cost-effective method for early heart attack risk detection, reducing dependency on expensive clinical tests and enabling accessible preventive healthcare.</p>
+        </div>
+        <div class="proj-box" id="proj3">
+            <h2>Personal Portfolio Website</h2>
+            <p>A responsive personal portfolio website to showcase my skills, projects, resume, and contact details in a professional way.</p>
+            <h4>Tools Used:</h4>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaSCript</li>
+                <li>Git</li>
+                <li>Github</li>
+            </ul>
+            <p>Provides a centralized digital profile for recruiters to quickly view my technical skills, project experience, and resume without relying only on a traditional CV.Demonstrates my frontend development skills through a real-world live project.
+
+Ensures easy communication by integrating contact links for LinkedIn, GitHub, and email.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact-icons">
+
+    <a href="https://linkedin.com/in/shailaja-143a692a6" target="_blank">
+        <i class="fa-brands fa-linkedin"></i> Linkedin<br>
+    </a>
+
+    <a href="https://github.com/21sk04" target="_blank">
+        <i class="fa-brands fa-github"></i> Github<br>
+    </a>
+
+    <a href="mailto:shljkulal@gmail.com">
+        <i class="fa-solid fa-envelope"></i> Email
+    </a>
+
+</div>
+</section>
+<footer>© 2026 Shailaja Kulal | All Rights Reserved</footer>
+</body>
+</html>
